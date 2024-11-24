@@ -1,9 +1,24 @@
+/* css variuables */
+:root {
+    --bg-color: #141619;
+    --main-char-color: #0A21C0;
+    --bg-color-2: #2C2E3A;
+    --other-color-1: #050A44;
+    --simple-char-color: #B3B4BD;
+}
+
 * {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    background-color: var(--bg-color);
+}
+
+.header h1 {
+    color: var(--simple-char-color);
 }
 
 .header h1 strong {
-    color: blue;
+    color: var(--main-char-color);
 }
+
