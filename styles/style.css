@@ -5,19 +5,111 @@
   --bg-color-2: #2C2E3A;
   --other-color-1: #050A44;
   --simple-char-color: #B3B4BD;
+  --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+  --transition: var(--transition);
 }
 
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background-color: var(--bg-color);
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--simple-char-color);
+  transition: var(--transition);
+}
+
+.header {
+  height: 100vh;
+  color: var(--simple-char-color);
+  overflow: hidden;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 3rem 18rem;
+}
+
+.section {
+  transform: translateY(-100%);
+  transition: var(--transition);
   background-color: var(--bg-color);
 }
 
-.header h1 {
-  color: var(--simple-char-color);
+.sec1 {
+  display: none;
+  transform: translateY(0) scale(1);
 }
 
-.header h1 strong {
-  color: var(--main-char-color);
+.sec2 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.sec3 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.sec4 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.sec5 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.controls {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+.controls .active-btn {
+  background-color: var(--main-char-color) !important;
+  transition: vat(--transition);
+}
+.controls .active-btn i {
+  color: var(--simple-char-color);
+}
+.controls .control {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--simple-char-color);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  box-shadow: var(--box-shadow-1);
+}
+.controls i {
+  color: var(--bg-color-2);
+  font-size: 1.2rem;
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */
