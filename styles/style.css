@@ -6,7 +6,7 @@
   --other-color-1: #050A44;
   --simple-char-color: #B3B4BD;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
-  --transition: var(--transition);
+  --transition: all .4s ease-in-out;
 }
 
 * {
@@ -75,6 +75,19 @@ section {
 .sec5 {
   display: none;
   transform: translateY(0) scale(1);
+}
+
+.active {
+  display: block;
+  animation: scaleAnim 1s ease-in-out;
+}
+@keyframes scaleAnim {
+  0% {
+    transform: translateY(-100%) scale(0);
+  }
+  100% {
+    transform: translateY(0%) scale(1);
+  }
 }
 
 .controls {
