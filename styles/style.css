@@ -180,6 +180,10 @@ section {
 .header-content .right-header .name span {
   color: var(--main-char-color);
 }
+.header-content .right-header h2 {
+  font-weight: 400;
+  font-style: italic;
+}
 .header-content .right-header p {
   margin: 1.5rem;
   line-height: 2rem;
