@@ -470,6 +470,15 @@ section {
   transform: scale(1);
 }
 
+/*Contact page */
+.contact-content-container {
+  display: flex;
+  padding-top: 3.5rem;
+}
+.contact-content-container .left-contact {
+  flex: 2;
+}
+
 .btn-container {
   display: flex;
   align-self: flex-start;
