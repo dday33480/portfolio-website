@@ -561,6 +561,44 @@ section {
         .submit-btn {
             display: flex;
             justify-content: flex-start;
+            border-radius: 30px;
+            color: inherit;
+            font-weight: 600;
+            position: relative;
+            border: 1px solid var(--bg-color-2);
+            display: flex;
+            align-self: flex-start;
+            align-items: center;
+            overflow: hidden;
+            width: 20%;
+            .btn-text {
+                padding: 0 2rem;
+            }
+            .btn-icon {
+                background-color: var(--main-char-color);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                padding: 1rem;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateX(100%);
+                transition: var(--transition);
+                z-index: -1;
+            }
+            &:hover {
+                &::before {
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--main-char-color);
+                    transform: translateX(0);
+                }
+            }
         }
     }
 }
