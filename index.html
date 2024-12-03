@@ -30,7 +30,7 @@
                     I love creating websites from scratch.
                 </p>
                 <div class="btn-container">
-                    <a href="https://www.linkedin.com/in/david-dufau-aa08983a/" class="main-btn">
+                    <a href="https://www.linkedin.com/in/david-dufau-aa08983a/" class="main-btn" target="_blank">
                         <span class="btn-text">View LinkedIn Profile</span>
                         <span class="btn-icon"><i class="fa-brands fa-linkedin-in"></i></span>
                     </a>
@@ -421,25 +421,25 @@
                     <div class="right-contact">
                         <form action="" class="contact-form">
                             <div class="input-control control-2">
-                                <input type="text" required placeholder="Your name">
-                                <input type="text" required placeholder="Company name">
+                                <input class="field"  type="text" id="name" required placeholder="Your name" autocomplete="off">
+                                <input class="field"  type="text" id="company" required placeholder="Company name" autocomplete="off">
                                 <div class="error-txt">Your name can't be blank</div>
                                 <div class="error-txt">Company name can't be blank</div>
                             </div>
                             <div class="input-control">
-                                <input type="email" required placeholder="Your email address">
-                                <div class="error-txt">email can't be blank</div>
+                                <input class="field"  type="email" id="email" required placeholder="Your email address" autocomplete="off">
+                                <div class="error-txt email">Email can't be blank</div>
                             </div>
                             <div class="input-control">
-                                <input type="text" required placeholder="Subject">
+                                <input class="field"  type="text" id="subject" required placeholder="Subject" autocomplete="off">
                                 <div class="error-txt">Subject can't be blank</div>
                             </div>
                             <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" placeholder="Your message here"></textarea>
+                                <textarea class="field" name="" id="message" cols="15" rows="8" placeholder="Your message here" autocomplete="off"></textarea>
                                 <div class="error-txt">Message can't be blank</div>
                             </div>
                             <div class="submit-btn">
-                                <span class="btn-text">Send</span>
+                                <span class="btn-text" type="submit">Send</span>
                                 <span class="btn-icon"><i class="fa-solid fa-paper-plane"></i></span>
                             </div>
                         </form>
@@ -463,6 +463,8 @@
         </div>
     </div>
     
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="app.js"></script>
 </body>
 </html>
