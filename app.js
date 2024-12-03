@@ -1,5 +1,3 @@
-import data from '/credentials.json' assert {type: 'json'};
-
 const sections = document.querySelectorAll('.section');
 const secButtons = document.querySelectorAll('.controls');
 const secBtn = document.querySelectorAll('.control');
@@ -10,6 +8,9 @@ const company = document.getElementById("company");
 const email = document.getElementById("email");
 const subject = document.getElementById("subject");
 const message = document.getElementById("message");
+
+
+// Page navigation
 
 function PageNavigation() {
     //Button click active class
@@ -48,12 +49,16 @@ PageNavigation();
 
 
 
-function sendEmail() {
-    const bodyMessage = `Message from ${fullName.value} at ${company.value}<br> Email: ${email.value}<br><br><b><u>MESSAGE:</u></b><br>${message.value}`;
-    const userEmail = data.email;
-    const password = data.password
+// Email SMTP
 
-    console.log(userEmail);
+function sendEmail() {
+    fetch('credentials.json')
+        .then((response) => response.json())
+        .then((json) => {
+            const userEmail = json.email
+            const password = json.password;
+
+    const bodyMessage = `Message from ${fullName.value} at ${company.value}<br> Email: ${email.value}<br><br><b><u>MESSAGE:</u></b><br>${message.value}`;
 
     Email.send({
         Host : "smtp.elasticemail.com",
@@ -63,24 +68,24 @@ function sendEmail() {
         From : userEmail,
         Subject : subject.value,
         Body : bodyMessage
-    }).then(
-      message => {
-        if(message == "OK") {
-            Swal.fire({
-                title: "Sent",
-                text: "Your email has successfully been sent",
-                icon: "success"
+        })
+        .then(message => {
+                if(message == "OK") {
+                    Swal.fire({
+                        title: "Sent",
+                        text: "Your email has successfully been sent",
+                        icon: "success"
+                    });
+                }
+                else {
+                    Swal.fire({
+                        title: "Failed",
+                        text: "Your email has not been sent",
+                        icon: "error"
+                    });
+                }
             });
-        }
-        else {
-            Swal.fire({
-                title: "Failed",
-                text: "Your email has not been sent",
-                icon: "error"
-            });
-        }
-      }
-    );
+    });
 }
 
 function checkInputs() {
