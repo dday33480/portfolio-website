@@ -1,3 +1,5 @@
+import data from '/credentials.json' assert {type: 'json'};
+
 const sections = document.querySelectorAll('.section');
 const secButtons = document.querySelectorAll('.controls');
 const secBtn = document.querySelectorAll('.control');
@@ -48,13 +50,17 @@ PageNavigation();
 
 function sendEmail() {
     const bodyMessage = `Message from ${fullName.value} at ${company.value}<br> Email: ${email.value}<br><br><b><u>MESSAGE:</u></b><br>${message.value}`;
+    const userEmail = data.email;
+    const password = data.password
+
+    console.log(userEmail);
 
     Email.send({
         Host : "smtp.elasticemail.com",
-        Username : "davidd33480@googlemail.com",
-        Password : "4B60D993571DAFCD350BE9E4E77724DE6953",
-        To : 'davidd33480@googlemail.com',
-        From : 'davidd33480@googlemail.com',
+        Username : userEmail,
+        Password : password,
+        To : userEmail,
+        From : userEmail,
         Subject : subject.value,
         Body : bodyMessage
     }).then(
