@@ -569,7 +569,7 @@ section {
             align-self: flex-start;
             align-items: center;
             overflow: hidden;
-            width: 35%;
+            width: 20%;
             .btn-text {
                 padding: 0 2rem;
             }
@@ -598,12 +598,21 @@ section {
                     transform: translateX(0);
                 }
             }
+            &:active {
+                box-shadow: 2px 4px 18px var(--main-char-color);
+                //transition: var(--transition);
+            }
+        }
+        .input-control.error {
+            .error-txt {
+                font-size: .8rem;
+                color: red;
+                text-align: left;
+                margin-top: 2%;
+                display: block;
+            }
         }
         .error-txt {
-            font-size: .8rem;
-            color: red;
-            text-align: left;
-            margin-top: 2%;
             display: none;
         }
     }
@@ -678,4 +687,8 @@ section {
             opacity: 0.4;
         }
     }
+}
+
+.swal2-confirm {
+    background-color: #0A21C0;
 }

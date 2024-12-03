@@ -565,7 +565,7 @@ section {
   align-self: flex-start;
   align-items: center;
   overflow: hidden;
-  width: 35%;
+  width: 20%;
 }
 .contact-content-container .right-contact .submit-btn .btn-text {
   padding: 0 2rem;
@@ -593,11 +593,17 @@ section {
   background-color: var(--main-char-color);
   transform: translateX(0);
 }
-.contact-content-container .right-contact .error-txt {
+.contact-content-container .right-contact .submit-btn:active {
+  box-shadow: 2px 4px 18px var(--main-char-color);
+}
+.contact-content-container .right-contact .input-control.error .error-txt {
   font-size: 0.8rem;
   color: red;
   text-align: left;
   margin-top: 2%;
+  display: block;
+}
+.contact-content-container .right-contact .error-txt {
   display: none;
 }
 
@@ -667,4 +673,8 @@ section {
   font-weight: 800;
   font-size: 6.3rem;
   opacity: 0.4;
+}
+
+.swal2-confirm {
+  background-color: #0A21C0;
 }/*# sourceMappingURL=style.css.map */
