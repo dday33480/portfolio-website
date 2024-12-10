@@ -52,14 +52,18 @@ PageNavigation();
 // Email SMTP
 
 function sendEmail() {
+
+    //Fetch elasticmail credentials
     fetch('credentials.json')
         .then((response) => response.json())
         .then((json) => {
             const userEmail = json.email
             const password = json.password;
 
+    // Set email body format as const variable
     const bodyMessage = `Message from ${fullName.value} at ${company.value}<br> Email: ${email.value}<br><br><b><u>MESSAGE:</u></b><br>${message.value}`;
 
+    //Connect to elasticmail host and prepare email for sending
     Email.send({
         Host : "smtp.elasticemail.com",
         Username : userEmail,
@@ -88,15 +92,19 @@ function sendEmail() {
     });
 }
 
+
+// Checking and validating contact form inputs
 function checkInputs() {
     const inputs = document.querySelectorAll('.field');
 
     for (const input of inputs) {
+        //error handling in case of empty fields
         if (input.value == "") {
             input.classList.add("error");
             input.parentElement.classList.add("error");
         }
 
+        //Call checkEmail function to validate email format
         if (inputs[2].value != "") {
             checkEmail();
         }
@@ -105,6 +113,7 @@ function checkInputs() {
             checkEmail();
         });
 
+        //Manage field errors in case of empty field to filled field
         input.addEventListener("keyup", () => {
             if (input.value != "") {
                 input.classList.remove("error");
@@ -118,17 +127,22 @@ function checkInputs() {
     }
 }
 
+//Check and validation of email format
 function checkEmail() {
     const emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
     const emailFormatErr = document.querySelector(".error-txt.email");
 
+    //Error handling of email field
     if (!email.value.match(emailRegex)) {
         email.classList.add("error");
         email.parentElement.classList.add("error");
 
+        //Error message in case of invalid email format
         if (email.value != "") {
             emailFormatErr.innerText = "Please enter a valid email address";
         }
+
+        //Error message on case of empty email field
         else {
             emailFormatErr.innerText = "Email can't be blank";
         }
@@ -139,10 +153,12 @@ function checkEmail() {
     }
 }
 
+//Form submission handling
 formSubmit.addEventListener("click", (e) => {
     e.preventDefault();
     checkInputs();
 
+    //Call sendEmail function if none of the fields contain error
     if (!fullName.classList.contains("error") && !email.classList.contains("error") && !company.classList.contains("error") 
         && !subject.classList.contains("error") && !message.classList.contains("error")) {
             sendEmail();
