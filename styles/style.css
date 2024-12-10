@@ -304,6 +304,30 @@ section {
 .about-stats .progress-bars .progress-bar .progress-container .progress .python {
   width: 45%;
 }
+.about-stats .progress-bars .progress-bar .progress-container .progress .java {
+  width: 40%;
+}
+.about-stats .progress-bars .progress-bar .progress-container .progress .php {
+  width: 45%;
+}
+.about-stats .progress-bars .progress-bar .progress-container .progress .django {
+  width: 45%;
+}
+.about-stats .progress-bars .progress-bar .progress-container .progress .kivy {
+  width: 45%;
+}
+.about-stats .progress-bars .progress-bar .progress-container .progress .react {
+  width: 45%;
+}
+.about-stats .progress-bars .progress-bar .progress-container .progress .node {
+  width: 45%;
+}
+.about-stats .progress-bars .progress-bar .progress-container .progress .cypress {
+  width: 50%;
+}
+.about-stats .progress-bars .progress-bar .progress-container .progress .robotframework {
+  width: 55%;
+}
 
 .stat-title {
   text-transform: uppercase;
