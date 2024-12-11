@@ -1,4 +1,4 @@
-/* css variuables */
+/* css variables */
 :root {
     --bg-color: #141619;
     --main-char-color: #0A21C0;
@@ -44,6 +44,12 @@ section {
     left: 0;
     top: 0;
     padding: 3rem 18rem;
+}
+
+@media (max-width:1230px) {
+    section {
+        padding: 2%;
+    }
 }
 
 .section {
@@ -103,7 +109,7 @@ section {
     transform: translateY(-50%);
     .active-btn {
         background-color: var(--main-char-color) !important;
-        transition: vat(--transition);
+        transition: var(--transition);
         i {
             color: var(--simple-char-color);
         }
@@ -128,6 +134,38 @@ section {
         }
 }
 
+@media (max-width: 1230px) {
+    .controls {
+        position: fixed;
+        background-color: var(--bg-color-2);
+        z-index: 1;
+        top: 95%;
+        left: 0%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateY(-50%);
+
+        .control {
+            padding: 1%;
+            cursor: grab;
+            background-color: var(--simple-char-color);
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+            box-shadow: var(--box-shadow-1);
+        }
+    }
+}
+
+
+//////////////////
 // Header Content
 .header-content {
     display: grid;
@@ -189,6 +227,42 @@ section {
     }
 }
 
+@media (max-width: 1230px) {
+    .header-content {
+        .left-header {
+            .image {
+                border-radius: 5%;
+                width: 60%;
+                height: 70%;
+                margin-left: 3%;
+                background-color: var(--bg-color-2);
+                transition: var(--transition);
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .right-header {
+            padding-right: 3%;
+            .name {
+                font-size: 200%;
+            }
+            h2 {
+                font-size: 120%;
+            }
+            p {
+                padding-left: 0;
+                font-size: 70%;
+                margin: 1rem 0.2rem;
+            }
+        }
+    }
+}
+
+
+//////////////////
 /*About*/
 .about-container {
     display: grid;
@@ -250,6 +324,45 @@ section {
         h4 {
             font-size: 2rem;
             text-transform: uppercase;
+        }
+    }
+}
+
+@media (max-width: 1230px) {
+    .about-container {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        .left-about {
+            padding-bottom: 10%;
+            padding-top: 15%;
+            padding-right: 0%;
+            p {
+                font-size: 80%;
+            }
+            h4 {
+                font-size: 120%;
+            }
+        }
+        .right-about {
+            gap: 2%;
+            padding-bottom: 5%;
+            margin-bottom: 5%;
+            .about-item {
+                box-shadow: 1% 2% 5% var(--bg-color-2);
+                box-sizing: 100% 100%;
+                .about-text {
+                    padding: 0.5rem;
+                    .large-text {
+                        font-size: 120%;
+                    }
+                    .small-text {
+                        font-size: 80%;
+                    }
+                }
+            }
         }
     }
 }
@@ -324,6 +437,40 @@ section {
                     .robotframework {
                         width: 55%;
                     }
+                    .analytics {
+                        width: 90%;
+                    }
+                    .tag-manager {
+                        width: 95%;
+                    }
+                    .sql {
+                        width: 65%;
+                    }
+                    .postman {
+                        width: 65%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1230px) {
+    .about-stats {
+        .progress-bars {
+            gap: 2%;
+            padding-bottom: 5%;
+            margin-bottom: 5%;
+            .progress-bar {
+                .progress-title {
+                    font-size: 80%;
+                }
+                .progress-container {
+                    font-size: 80%;
+                    .progress {
+                        margin-left: 2%;
+                        width: 70%;
+                    }
                 }
             }
         }
@@ -345,6 +492,12 @@ section {
         height: 1px;
         background-color: var(--simple-char-color);
         transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 1230px) {
+    .stat-title {
+    padding: 8% 0%;
     }
 }
 
@@ -399,6 +552,29 @@ section {
     }
 }
 
+@media (max-width: 1230px) {
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        .timeline-item {
+            padding-left: 5%;
+            margin-left: 5%;
+            .timeline-duration {
+                position: relative;
+                left: 5%;
+                font-size: 70%;
+            }
+            h5 {
+                padding: 3% 0%;
+                font-size: 120%;
+            }
+            p {
+                font-size: 90%;
+            }
+        }
+    }
+}
+
 .timeline-title {
     text-transform: uppercase;
     font-size: 1.4rem;
@@ -414,6 +590,12 @@ section {
         height: 1px;
         background-color: var(--simple-char-color);
         transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 1230px) {
+    .timeline-title {
+        padding: 8% 0%;
     }
 }
 
@@ -648,6 +830,12 @@ section {
     display: flex;
     align-self: flex-start;
 }
+
+@media (max-width: 1230px) {
+    .btn-container {
+        font-size: 70%;
+    }
+}
 .main-btn {
     border-radius: 30px;
     color: inherit;
@@ -688,6 +876,15 @@ section {
     }
 }
 
+@media (max-width: 1230px) {
+    .main-btn {
+        .btn-icon {
+            padding: 1.3rem;
+        }
+
+    }
+}
+
 .main-title {
     text-align: center;
     h2 {
@@ -709,6 +906,18 @@ section {
             font-weight: 800;
             font-size: 6.3rem;
             opacity: 0.4;
+        }
+    }
+}
+
+@media (max-width:1230px) {
+    .main-title {
+        h2 {
+            font-size: 220%;
+            .bg-text {
+                font-size: 140%;
+                width: 100%;
+            }
         }
     }
 }
