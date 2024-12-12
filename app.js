@@ -54,11 +54,13 @@ PageNavigation();
 function sendEmail() {
 
     //Fetch elasticmail credentials
-    fetch('credentials.json')
+    /*fetch('credentials.json')
         .then((response) => response.json())
-        .then((json) => {
-            const userEmail = json.email
-            const password = json.password;
+        .then((json) => {*/
+            const userEmail = etc/secret/ELASTICMAIL_USER_EMAIL;    //json.ELASTICMAIL_USER_EMAIL
+            const password = etc/secret/ELASTICMAIL_PASSWORD;    //json.ELASTICMAIL_PASSWORD;
+            console.log(userEmail);
+            console.log(password);
 
     // Set email body format as const variable
     const bodyMessage = `Message from ${fullName.value} at ${company.value}<br> Email: ${email.value}<br><br><b><u>MESSAGE:</u></b><br>${message.value}`;
@@ -89,7 +91,7 @@ function sendEmail() {
                     });
                 }
             });
-    });
+    //});
 }
 
 
