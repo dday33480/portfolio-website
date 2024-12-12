@@ -584,6 +584,12 @@ section {
   text-align: center;
 }
 
+@media (max-width: 1230px) {
+  .portfolio-text {
+    font-size: 80%;
+    padding: 10% 0%;
+  }
+}
 .portfolios {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -651,6 +657,23 @@ section {
   color: var(--main-char-color);
 }
 
+@media (max-width: 1230px) {
+  .portfolios {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 10%;
+    padding-bottom: 10%;
+    margin-bottom: 50%;
+    gap: 3%;
+  }
+  .portfolios .portfolio-item img {
+    width: 100%;
+    height: 20vh;
+  }
+  .portfolios .hover-items h3 {
+    font-size: 120%;
+    margin-bottom: 5%;
+  }
+}
 .portfolio-item:hover .hover-items {
   opacity: 1;
   transform: scale(1);
@@ -793,6 +816,77 @@ section {
   display: none;
 }
 
+@media (max-width: 1230px) {
+  .contact-content-container {
+    flex-direction: column;
+  }
+  .contact-content-container .left-contact h4 {
+    font-size: 120%;
+  }
+  .contact-content-container .left-contact p {
+    font-size: 80%;
+  }
+  .contact-content-container .left-contact .contact-info .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1%;
+    margin-bottom: 3%;
+  }
+  .contact-content-container .left-contact .contact-info .contact-item .icon {
+    font-size: 80%;
+    grid-template-columns: 30% 1fr;
+    padding-top: 2%;
+  }
+  .contact-content-container .left-contact .contact-info .contact-item .icon i {
+    font-size: 120%;
+  }
+  .contact-content-container .left-contact .contact-info .contact-item .icon span {
+    font-weight: 800;
+  }
+  .contact-content-container .left-contact .contact-info .contact-item p {
+    margin-left: 2% !important;
+    padding-left: 3% !important;
+  }
+  .contact-content-container .left-contact .contact-info .contact-item::before {
+    content: "";
+    position: absolute;
+    left: 25%;
+    width: 45%;
+    height: 1px;
+    background-color: var(--simple-char-color);
+    transform: translateX(-50%);
+  }
+  .contact-content-container .left-contact .contact-icons .contact-icon {
+    margin: 5% 0%;
+  }
+  .contact-content-container .right-contact {
+    margin: 5% 2%;
+  }
+  .contact-content-container .right-contact .contact-form {
+    font-size: 80%;
+    margin-top: 5%;
+    padding-top: 5%;
+  }
+  .contact-content-container .right-contact .input-control {
+    margin: 5% 0;
+  }
+  .contact-content-container .right-contact .input-control input {
+    border: 10% solid var(--simple-char-color);
+  }
+  .contact-content-container .right-contact .submit-btn {
+    margin-bottom: 20%;
+    width: 45%;
+  }
+  .contact-content-container .right-contact::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 0.2%;
+    background-color: var(--simple-char-color);
+    transform: translateX(-50%);
+  }
+}
 .btn-container {
   display: flex;
   align-self: flex-start;
