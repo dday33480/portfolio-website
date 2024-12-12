@@ -54,7 +54,7 @@ PageNavigation();
 function sendEmail() {
 
     //Fetch elasticmail credentials
-    fetch('credentials.json')
+    fetch('etc/secrets/credentials.json')
         .then((response) => response.json())
         .then((json) => {
             const userEmail = json.ELASTICMAIL_USER_EMAIL
