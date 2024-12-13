@@ -537,6 +537,8 @@ section {
   .timeline {
     display: flex;
     flex-direction: column;
+    padding-bottom: 15%;
+    margin-bottom: 15%;
   }
   .timeline .timeline-item {
     padding-left: 5%;
@@ -803,6 +805,7 @@ section {
 }
 .contact-content-container .right-contact .submit-btn:active {
   box-shadow: 2px 4px 18px var(--main-char-color);
+  transition: var(--transition);
 }
 .contact-content-container .right-contact .input-control.error .error-txt {
   font-size: 0.8rem;
