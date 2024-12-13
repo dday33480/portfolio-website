@@ -556,6 +556,8 @@ section {
     .timeline {
         display: flex;
         flex-direction: column;
+        padding-bottom: 15%;
+        margin-bottom: 15%;
         .timeline-item {
             padding-left: 5%;
             margin-left: 5%;
@@ -834,7 +836,7 @@ section {
             }
             &:active {
                 box-shadow: 2px 4px 18px var(--main-char-color);
-                //transition: var(--transition);
+                transition: var(--transition);
             }
         }
         .input-control.error {
