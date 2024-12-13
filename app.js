@@ -53,12 +53,9 @@ PageNavigation();
 
 function sendEmail() {
 
-    //Fetch elasticmail credentials
-    fetch('etc/secrets/credentials.json')
-        .then((response) => response.json())
-        .then((json) => {
-            const userEmail = json.ELASTICMAIL_USER_EMAIL
-            const password = json.ELASTICMAIL_PASSWORD;
+    // Get Environment Variables for mail server authentication
+    const userEmail = process.env.ELASTICMAIL_USER_EMAIL;
+    const password = process.env.ELASTICMAIL_PASSWORD;
 
     // Set email body format as const variable
     const bodyMessage = `Message from ${fullName.value} at ${company.value}<br> Email: ${email.value}<br><br><b><u>MESSAGE:</u></b><br>${message.value}`;
@@ -72,7 +69,7 @@ function sendEmail() {
         From : userEmail,
         Subject : subject.value,
         Body : bodyMessage
-        })
+    })
         .then(message => {
                 if(message == "OK") {
                     Swal.fire({
@@ -88,8 +85,7 @@ function sendEmail() {
                         icon: "error"
                     });
                 }
-            });
-    });
+        });
 }
 
 
