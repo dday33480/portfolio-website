@@ -48,7 +48,8 @@ function PageNavigation() {
 PageNavigation();
 
 
-
+/////////////////////////////// TO DO : Form submission and email send functionnality ////////////////////////////////////////////////
+/*
 // Email SMTP
 
 function sendEmail() {
@@ -161,3 +162,4 @@ formSubmit.addEventListener("click", (e) => {
     }
 
 });
+*/
