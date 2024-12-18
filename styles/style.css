@@ -924,6 +924,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
   }
   .contact-content-container .right-contact .contact-icons .contact-icon {
     font-size: 70%;
