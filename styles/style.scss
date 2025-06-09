@@ -165,6 +165,31 @@ section {
 }
 
 
+.lang-controls {
+    display: flex;
+    text-decoration: none;
+    color: var(--simple-char-color);
+    font-family: inherit;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    .lang {
+        padding: .3rem;
+        margin: .1rem;
+        border: 2px solid var(--simple-char-color);
+        border-radius: 5px;
+        border-color: var(--simple-char-color);
+    }
+    .active-lang {
+        background-color: var(--main-char-color) !important;
+        transition: var(--transition);
+        i {
+            color: var(--simple-char-color);
+        }
+    }
+}
+
+
 //////////////////
 // Header Content
 .header-content {
