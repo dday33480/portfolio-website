@@ -2,6 +2,9 @@ const sections = document.querySelectorAll('.section');
 const secButtons = document.querySelectorAll('.controls');
 const secBtn = document.querySelectorAll('.control');
 const allSections = document.querySelector('.main-content');
+const languages = document.querySelectorAll('.lang');
+const langBtn = document.querySelectorAll('.lang-btn');
+const allLanguages = document.querySelector('.lang-controls');
 const formSubmit = document.querySelector('.submit-btn');
 const fullName = document.getElementById("name");
 const company = document.getElementById("company");
@@ -10,8 +13,8 @@ const subject = document.getElementById("subject");
 const message = document.getElementById("message");
 
 
-// Page navigation
 
+// Page navigation
 function PageNavigation() {
     //Button click active class
     for(let i = 0; i < secBtn.length; i++) {
@@ -48,118 +51,136 @@ function PageNavigation() {
 PageNavigation();
 
 
-/////////////////////////////// TO DO : Form submission and email send functionnality ////////////////////////////////////////////////
-/*
-// Email SMTP
+// Language selection & translation
+function LanguageSelection() {
+    //Button click active class
+    for(let i = 0; i < langBtn.length; i++) {
+        langBtn[i].addEventListener('click', function() {
+            let currentBtn = document.querySelectorAll('.active-lang');
+            currentBtn[0].className = currentBtn[0].className.replace('active-lang','');
+            this.className += ' active-lang';
 
-function sendEmail() {
-
-    // Get Environment Variables for mail server authentication
-    const userEmail = process.env.ELASTICMAIL_USER_EMAIL;
-    const password = process.env.ELASTICMAIL_PASSWORD;
-
-    // Set email body format as const variable
-    const bodyMessage = `Message from ${fullName.value} at ${company.value}<br> Email: ${email.value}<br><br><b><u>MESSAGE:</u></b><br>${message.value}`;
-
-    //Connect to elasticmail host and prepare email for sending
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : userEmail,
-        Password : password,
-        To : userEmail,
-        From : userEmail,
-        Subject : subject.value,
-        Body : bodyMessage
-    })
-        .then(message => {
-                if(message == "OK") {
-                    Swal.fire({
-                        title: "Sent",
-                        text: "Your email has successfully been sent",
-                        icon: "success"
-                    });
-                }
-                else {
-                    Swal.fire({
-                        title: "Failed",
-                        text: "Your email has not been sent",
-                        icon: "error"
-                    });
-                }
-        });
-}
-
-
-// Checking and validating contact form inputs
-function checkInputs() {
-    const inputs = document.querySelectorAll('.field');
-
-    for (const input of inputs) {
-        //error handling in case of empty fields
-        if (input.value == "") {
-            input.classList.add("error");
-            input.parentElement.classList.add("error");
-        }
-
-        //Call checkEmail function to validate email format
-        if (inputs[2].value != "") {
-            checkEmail();
-        }
-
-        inputs[2].addEventListener("keyup", () => {
-            checkEmail();
-        });
-
-        //Manage field errors in case of empty field to filled field
-        input.addEventListener("keyup", () => {
-            if (input.value != "") {
-                input.classList.remove("error");
-                input.parentElement.classList.remove("error");
-            }
-            else {
-                input.classList.add("error");
-                input.parentElement.classList.add("error");
-            }
         })
     }
-}
 
-//Check and validation of email format
-function checkEmail() {
-    const emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
-    const emailFormatErr = document.querySelector(".error-txt.email");
+    //Language selection active class management
+    allLanguages.addEventListener('click', (e) => {
+        const id = e.target.dataset.id;
+        if(id){
+            //Remove active state
+            langBtn.forEach((btn) => {
+                btn.classList.remove('active-lang')
+            })
+            e.target.classList.add('active-lang')
 
-    //Error handling of email field
-    if (!email.value.match(emailRegex)) {
-        email.classList.add("error");
-        email.parentElement.classList.add("error");
+            //Hide inactive sections
+            languages.forEach((language) => {
+                language.classList.remove('active-lang')
+            })
 
-        //Error message in case of invalid email format
-        if (email.value != "") {
-            emailFormatErr.innerText = "Please enter a valid email address";
+            const element = document.getElementById(id);
+            element.classList.add('active-lang');
         }
 
-        //Error message on case of empty email field
-        else {
-            emailFormatErr.innerText = "Email can't be blank";
-        }
-    }
-    else {
-        email.classList.remove("error");
-        email.parentElement.classList.remove("error");
-    }
+        let activeLang = document.querySelector('.active-lang');
+        let selectedLang = document.querySelector('.active-lang').id;
+        let name = document.querySelector('.name');
+        let name2 = document.querySelector('.name-2');
+        let homeDesc = document.querySelector('.home-desc');
+        let linkedinBtn = document.querySelector('.linkedin-btn');
+        let pageTitle1 = document.querySelector('.page-title1');
+        let about = document.querySelector('.about');
+        let aboutDesc = document.querySelector('.about-desc');
+        let smallText2 = document.querySelector('.small-text-2');
+        let smallText3 = document.querySelector('.small-text-3');
+        let smallText4 = document.querySelector('.small-text-4');
+        let statTitle = document.querySelector('.stat-title');
+        let timelineTitle = document.querySelector('.timeline-title');
+        let xpTitle1 = document.querySelector('.xp-title-1');
+        let xpDesc1 = document.querySelector('.xp-desc-1');
+        let xpTitle2 = document.querySelector('.xp-title-2');
+        let xpDesc2 = document.querySelector('.xp-desc-2');
+        let xpTitle3 = document.querySelector('.xp-title-3');
+        let xpDesc3 = document.querySelector('.xp-desc-3');
+        let xpTitle4 = document.querySelector('.xp-title-4');
+        let xpDesc4 = document.querySelector('.xp-desc-4');
+        let xpTitle5 = document.querySelector('.xp-title-5');
+        let xpDesc5 = document.querySelector('.xp-desc-5');
+        let xpTitle6 = document.querySelector('.xp-title-6');
+        let xpDesc6 = document.querySelector('.xp-desc-6');
+        let xpTitle7 = document.querySelector('.xp-title-7');
+        let xpDesc7 = document.querySelector('.xp-desc-7');
+        let xpTitle8 = document.querySelector('.xp-title-8');
+        let xpDesc8 = document.querySelector('.xp-desc-8');
+        let xpTitle9 = document.querySelector('.xp-title-9');
+        let xpDesc9 = document.querySelector('.xp-desc-9');
+        let portfolioPage = document.querySelector('.portfolio-page');
+        let portfolioText = document.querySelector('.portfolio-text');
+        let projectSource = document.querySelector('.project-source');
+        let contactPage = document.querySelector('.contact-page');
+        let contactTitle = document.querySelector('.contact-title');
+        let contactDesc = document.querySelector('.contact-desc');
+        let location = document.querySelector('.location');
+        let location2 = document.querySelector('.location-2');
+        let languages = document.querySelector('.languages');
+        let languages2 = document.querySelector('.languages-2');
+        let education = document.querySelector('.education');
+        let education2 = document.querySelector('.education-2');
+        let linkedinContact = document.querySelector('.linkedin-contact');
+        let githubContact = document.querySelector('.github-contact');
+
+
+        fetch('./lang.json')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                console.log(data.fr.name);
+
+                if(selectedLang === "fr") {
+                    name.textContent = data[selectedLang].name;
+                    name2.textContent = data[selectedLang].name_2;
+
+
+
+
+
+
+
+
+                } else if(selectedLang === "en") {
+                    name.textContent = data[selectedLang].name;
+                    name2.textContent = data[selectedLang].name_2;
+                    console.log("English language chosen");
+                } else {
+                    console.log("Undefined");
+                }
+            })
+    }) 
+
+    
+
+
 }
 
-//Form submission handling
-formSubmit.addEventListener("click", (e) => {
-    e.preventDefault();
-    checkInputs();
+LanguageSelection();
 
-    //Call sendEmail function if none of the fields contain error
-    if (!fullName.classList.contains("error") && !email.classList.contains("error") && !company.classList.contains("error") 
-        && !subject.classList.contains("error") && !message.classList.contains("error")) {
-            sendEmail();
-    }
+/*
+// Page translation
+function PageTranslation() {
+    fetch('./lang.json')
+        .then(res => res.json())
+        .then(data => {
+            //console.log(data);
+        })
 
-});
+    // Get page elements
+    const selLang = LanguageSelection();
+    const hompageTitle = document.querySelector('.name')
+    const homepageDesc = document.querySelector('.name-2')
+
+    console.log(selLang)
+
+    
+}
+PageTranslation();
 */
