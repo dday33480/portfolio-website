@@ -87,10 +87,12 @@ function LanguageSelection() {
         let name = document.querySelector('.name');
         let name2 = document.querySelector('.name-2');
         let homeDesc = document.querySelector('.home-desc');
-        let linkedinBtn = document.querySelector('.linkedin-btn');
+        let linkedinBtn = document.querySelectorAll('.linkedin-btn');
         let pageTitle1 = document.querySelector('.page-title1');
-        let about = document.querySelector('.about');
+        let aboutMe = document.querySelector('.about-me');
         let aboutDesc = document.querySelector('.about-desc');
+        let largeText = document.querySelectorAll('.large-text')[2];
+        let smallText1 = document.querySelector('.small-text-1');
         let smallText2 = document.querySelector('.small-text-2');
         let smallText3 = document.querySelector('.small-text-3');
         let smallText4 = document.querySelector('.small-text-4');
@@ -114,9 +116,11 @@ function LanguageSelection() {
         let xpDesc8 = document.querySelector('.xp-desc-8');
         let xpTitle9 = document.querySelector('.xp-title-9');
         let xpDesc9 = document.querySelector('.xp-desc-9');
+        let xpTitle10 = document.querySelector('.xp-title-10');
+        let xpDesc10 = document.querySelector('.xp-desc-10');
         let portfolioPage = document.querySelector('.portfolio-page');
         let portfolioText = document.querySelector('.portfolio-text');
-        let projectSource = document.querySelector('.project-source');
+        let projectSource = document.querySelectorAll('.project-source');
         let contactPage = document.querySelector('.contact-page');
         let contactTitle = document.querySelector('.contact-title');
         let contactDesc = document.querySelector('.contact-desc');
@@ -136,24 +140,69 @@ function LanguageSelection() {
                 console.log(data);
                 console.log(data.fr.name);
 
-                if(selectedLang === "fr") {
-                    name.textContent = data[selectedLang].name;
-                    name2.textContent = data[selectedLang].name_2;
+                // Iterate over and change elements with collection 
+                for (let i=0 ; i < linkedinBtn.length ; i++) {           
+                    linkedinBtn[i].innerText = data[selectedLang].linkedin_btn;
+                }
 
+                for (let i=0 ; i< projectSource.length ; i++) {
+                    projectSource[i].innerText = data[selectedLang].project_source;
+                }
 
-
-
-
-
-
-
-                } else if(selectedLang === "en") {
-                    name.textContent = data[selectedLang].name;
+                //if(selectedLang === "fr") {
+                name.innerHTML = data[selectedLang].name;
+                name2.textContent = data[selectedLang].name_2;
+                homeDesc.textContent = data[selectedLang].home_desc;
+                pageTitle1.innerHTML = data[selectedLang].page_title1;
+                aboutMe.textContent = data[selectedLang].about_me;
+                aboutDesc.textContent = data[selectedLang].about_desc;
+                largeText.innerHTML = data[selectedLang].large_text;
+                smallText1.textContent = data[selectedLang].small_text_1;
+                smallText2.textContent = data[selectedLang].small_text_2;
+                smallText3.textContent = data[selectedLang].small_text_3;
+                smallText4.textContent = data[selectedLang].small_text_4;
+                statTitle.textContent = data[selectedLang].stat_title;
+                timelineTitle.textContent = data[selectedLang].timeline_title;
+                xpTitle1.innerHTML = data[selectedLang].xp_title_1;
+                xpDesc1.innerHTML = data[selectedLang].xp_desc_1;
+                xpTitle2.innerHTML = data[selectedLang].xp_title_2;
+                xpDesc2.innerHTML = data[selectedLang].xp_desc_2;
+                xpTitle3.innerHTML = data[selectedLang].xp_title_3;
+                xpDesc3.innerHTML = data[selectedLang].xp_desc_3;
+                xpTitle4.innerHTML = data[selectedLang].xp_title_4;
+                xpDesc4.innerHTML = data[selectedLang].xp_desc_4;
+                xpTitle5.innerHTML = data[selectedLang].xp_title_5;
+                xpDesc5.innerHTML = data[selectedLang].xp_desc_5;
+                xpTitle6.innerHTML = data[selectedLang].xp_title_6;
+                xpDesc6.innerHTML = data[selectedLang].xp_desc_6;
+                xpTitle7.innerHTML = data[selectedLang].xp_title_7;
+                xpDesc7.innerHTML = data[selectedLang].xp_desc_7;
+                xpTitle8.innerHTML = data[selectedLang].xp_title_8;
+                xpDesc8.innerHTML = data[selectedLang].xp_desc_8;
+                xpTitle9.innerHTML = data[selectedLang].xp_title_9;
+                xpDesc9.innerHTML = data[selectedLang].xp_desc_9;
+                xpTitle10.innerHTML = data[selectedLang].xp_title_10;
+                xpDesc10.innerHTML = data[selectedLang].xp_desc_10;
+                portfolioPage.innerHTML = data[selectedLang].portfolio_page;
+                portfolioText.innerHTML = data[selectedLang].portfolio_text;
+                contactPage.innerHTML = data[selectedLang].contact_page;
+                contactTitle.textContent = data[selectedLang].contact_title;
+                contactDesc.textContent = data[selectedLang].contact_desc;
+                location.textContent = data[selectedLang].location;
+                location2.textContent = data[selectedLang].location_2;
+                languages.textContent = data[selectedLang].languages;
+                languages2.textContent = data[selectedLang].languages_2;
+                education.textContent = data[selectedLang].education;
+                education2.textContent = data[selectedLang].education_2;
+                linkedinContact.textContent = data[selectedLang].linkedin_contact;
+                githubContact.textContent = data[selectedLang].github_contact;
+                /*} else if(selectedLang === "en") {
+                    name.HTMLContent = data[selectedLang].name;
                     name2.textContent = data[selectedLang].name_2;
                     console.log("English language chosen");
                 } else {
                     console.log("Undefined");
-                }
+                }*/
             })
     }) 
 
