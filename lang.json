@@ -1,11 +1,12 @@
 {"en": {
-    "name": "Hi, i'm David.",
+    "name": "Hi, i'm <span>David</span>.",
     "name_2": "I'm a Web Developer.",
     "home_desc": "I've always been fascinated by the power of technology. I enjoy the challenge of building innovative web applications, solving complex problems and continuous learning. ",
     "linkedin_btn": "View LinkedIn Profile",
     "page_title1": "About <span>me</span><span class='bg_text'>about me</span></h2>",
     "about_me": "Who am i",
-    "about_desc":"Beyond my technical skills, I'm a dedicated professional with a strong work ethic. As a web developer, I'm driven by a desire to solve problems and create user_friendly experiences. I love the process of breaking down complex challenges into manageable steps, and I'm always eager to learn new technologies and techniques. I'm committed to staying up_to_date with industry trends and best practices to deliver high_quality solutions.",
+    "about_desc":"Beyond my technical skills, I'm a dedicated professional with a strong work ethic. As a web developer, I'm driven by a desire to solve problems and create user-friendly experiences. I love the process of breaking down complex challenges into manageable steps, and I'm always eager to learn new technologies and techniques. I'm committed to staying up-to-date with industry trends and best practices to deliver high-quality solutions.",
+    "large_text": "$1,000's",
     "small_text_1":"Years in Digital",
     "small_text_2":"Large Clients <br /> Managed",
     "small_text_3":"Generated in <br />client revenue",
@@ -48,13 +49,13 @@
     "github_contact": "Contact me on GitHub"
 },
 "fr": {
-    "name": "Bonjour, moi c'est <span>David</span>",
+    "name": "Bonjour, moi c'est <span>David</span>.",
     "name_2": "Je suis dévelopeur web.",
     "home_desc": "J'ai toujours été faciné par la technologie. J'apprécie le défi de créer des applications web innovantes, de résoudre des problèmes complexes et d'apprendre continuellement. ",
     "linkedin_btn": "Voir le profil LinkedIn ",
     "page_title1": "À propos de <span>moi</span><span class='bg-text'>à propos</span></h2>",
     "about_me": "qui suis-je",
-    "about_desc":"Beyond my technical skills, I'm a dedicated professional with a strong work ethic. As a web developer, I'm driven by a desire to solve problems and create user_friendly experiences. I love the process of breaking down complex challenges into manageable steps, and I'm always eager to learn new technologies and techniques. I'm committed to staying up_to_date with industry trends and best practices to deliver high_quality solutions.",
+    "about_desc":"Au-delà de mes compétences techniques, je suis un professionnel dévoué doté d'une solide éthique de travail. En tant que développeur web, je suis animé par le désir de résoudre les problèmes et de créer des expériences utilisateur intuitives. J'apprécie le processus consistant à décomposer les défis complexes en étapes gérables, et je suis toujours impatient d'apprendre de nouvelles technologies et techniques. Je m'engage à rester informé des tendances de l'industrie et des meilleures pratiques pour fournir des solutions de haute qualité.",
     "large_text": "Milliers €s",
     "small_text_1":"Années dans le Digital",
     "small_text_2":"Grand Comptes Gérés",
@@ -83,7 +84,7 @@
     "xp_title_10": "Agent de Centre d'Appels <span> - Knowsley Metropolitan Borough Council</span>",
     "xp_desc_10": "Fourni un service client exceptionnel aux résidents locaux, gérant habilement un volume élevé d'appels entrants.<br><br>Les responsabilités incluaient le traitement des demandes, l'enregistrement des plaintes et le transfert efficace des appels vers les départements appropriés pour une résolution rapide des problèmes.<br><br>Collaboré directement avec les autorités locales, telles que la brigade des sapeurs-pompiers et la police, pour coordonner les requêtes spéciales et les situations d'urgence, améliorant ainsi la satisfaction globale de la communauté et l'efficacité opérationnelle.",
     "portfolio_page": "Mon <span>Portfolio</span><span class='bg-text'>Portfolio</span>",
-    "portfolio_text": "Here you will find various projects i have undertaken.<br/>Feel free to browse around and checkout the work i have done.",
+    "portfolio_text": "Ici vous trouverez les divers projets personnel que j'ai entrepris.<br/>N'hésitez pas à regarder et voir le travail effectué .",
     "project_source": "Source du Projet",
     "contact_page": "<span>Contact</span><span class='bg-text'>Contact</span>",
     "contact_title": "Contactez moi",
@@ -94,8 +95,8 @@
     "languages_2": ": Français, Anglais",
     "education": "Éducation",
     "education_2": ": ENI École Informatique, Nantes, France",
-    "linkedin_contact": "Contactez moi sur LinkedIn",
-    "github_contact": "Contactez moi sur GitHub" 
+    "linkedin_contact": "Contact sur LinkedIn",
+    "github_contact": "Mon GitHub" 
 }
 
 }
