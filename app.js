@@ -196,13 +196,6 @@ function LanguageSelection() {
                 education2.textContent = data[selectedLang].education_2;
                 linkedinContact.textContent = data[selectedLang].linkedin_contact;
                 githubContact.textContent = data[selectedLang].github_contact;
-                /*} else if(selectedLang === "en") {
-                    name.HTMLContent = data[selectedLang].name;
-                    name2.textContent = data[selectedLang].name_2;
-                    console.log("English language chosen");
-                } else {
-                    console.log("Undefined");
-                }*/
             })
     }) 
 
@@ -212,24 +205,3 @@ function LanguageSelection() {
 }
 
 LanguageSelection();
-
-/*
-// Page translation
-function PageTranslation() {
-    fetch('./lang.json')
-        .then(res => res.json())
-        .then(data => {
-            //console.log(data);
-        })
-
-    // Get page elements
-    const selLang = LanguageSelection();
-    const hompageTitle = document.querySelector('.name')
-    const homepageDesc = document.querySelector('.name-2')
-
-    console.log(selLang)
-
-    
-}
-PageTranslation();
-*/
