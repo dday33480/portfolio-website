@@ -722,6 +722,12 @@ section {
   margin: 1rem 0;
   line-height: 2rem;
 }
+.contact-content-container .left-contact table, .contact-content-container .left-contact td {
+  border-collapse: collapse;
+  border-bottom: 1px solid var(--simple-char-color);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .contact-content-container .left-contact .contact-info .location-row .icon {
   width: 2%;
 }
@@ -749,14 +755,20 @@ section {
 .contact-content-container .left-contact .contact-info .education-row .education-detail {
   width: 50%;
 }
+.contact-content-container .left-contact .contact-info .contact-item {
+  /*.icon {
+      //display: grid;
+      //grid-template-columns: 40px 1fr;
+      i {
+          display: flex;
+          align-items: center;
+          font-size: 1.3rem;
+      }
+  }*/
+}
 .contact-content-container .left-contact .contact-info .contact-item p {
   margin: 0.3rem 0 !important;
   padding: 0 !important;
-}
-.contact-content-container .left-contact .contact-info .contact-item .icon i {
-  display: flex;
-  align-items: center;
-  font-size: 1.3rem;
 }
 .contact-content-container .right-contact {
   flex: 3;
@@ -907,6 +919,15 @@ section {
     align-items: flex-start;
     margin-top: 1%;
     margin-bottom: 3%;
+    /*&::before {
+        content: '';
+        position: absolute;
+        left: 25%;
+        width: 45%;
+        height: 1px;
+        background-color: var(--simple-char-color);
+        transform: translateX(-50%);
+    }*/
   }
   .contact-content-container .left-contact .contact-info .contact-item .icon {
     font-size: 80%;
@@ -922,15 +943,6 @@ section {
   .contact-content-container .left-contact .contact-info .contact-item p {
     margin-left: 2% !important;
     padding-left: 3% !important;
-  }
-  .contact-content-container .left-contact .contact-info .contact-item::before {
-    content: "";
-    position: absolute;
-    left: 25%;
-    width: 45%;
-    height: 1px;
-    background-color: var(--simple-char-color);
-    transform: translateX(-50%);
   }
   .contact-content-container .right-contact {
     margin: 5% 1%;
