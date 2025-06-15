@@ -424,10 +424,10 @@ section {
   width: 60%;
 }
 .about-stats .progress-bars .progress-bar .progress-container .progress .javascript {
-  width: 45%;
+  width: 65%;
 }
 .about-stats .progress-bars .progress-bar .progress-container .progress .python {
-  width: 45%;
+  width: 50%;
 }
 .about-stats .progress-bars .progress-bar .progress-container .progress .java {
   width: 40%;
@@ -722,18 +722,36 @@ section {
   margin: 1rem 0;
   line-height: 2rem;
 }
-.contact-content-container .left-contact .contact-info .contact-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.contact-content-container .left-contact .contact-info .location-row .icon {
+  width: 2%;
+}
+.contact-content-container .left-contact .contact-info .location-row .language {
+  width: 20%;
+}
+.contact-content-container .left-contact .contact-info .location-row .language-detail {
+  width: 50%;
+}
+.contact-content-container .left-contact .contact-info .language-row .icon {
+  width: 8%;
+}
+.contact-content-container .left-contact .contact-info .language-row .language {
+  width: 20%;
+}
+.contact-content-container .left-contact .contact-info .language-row .language-detail {
+  width: 50%;
+}
+.contact-content-container .left-contact .contact-info .education-row .icon {
+  width: 8%;
+}
+.contact-content-container .left-contact .contact-info .education-row .education {
+  width: 20%;
+}
+.contact-content-container .left-contact .contact-info .education-row .education-detail {
+  width: 50%;
 }
 .contact-content-container .left-contact .contact-info .contact-item p {
   margin: 0.3rem 0 !important;
   padding: 0 !important;
-}
-.contact-content-container .left-contact .contact-info .contact-item .icon {
-  display: grid;
-  grid-template-columns: 40px 1fr;
 }
 .contact-content-container .left-contact .contact-info .contact-item .icon i {
   display: flex;

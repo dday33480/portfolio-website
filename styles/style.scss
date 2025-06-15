@@ -433,10 +433,10 @@ section {
                         width: 60%;
                     }
                     .javascript {
-                        width: 45%;
+                        width: 65%;
                     }
                     .python {
-                        width: 45%;
+                        width: 50%;
                     }
                     .java {
                         width: 40%;
@@ -748,17 +748,52 @@ section {
             line-height: 2rem;
         }
         .contact-info {
+            .location-row {
+                .icon {
+                    width:2%;
+                }
+                .language {
+                    width: 20%;
+                }
+                .language-detail {
+                    width: 50%;
+                }
+            }
+                
+            .language-row {
+                .icon {
+                    width:8%;
+                }
+                .language {
+                    width: 20%;
+                }
+                .language-detail {
+                    width: 50%;
+                }
+            }
+
+            .education-row {
+                .icon {
+                    width:8%;
+                }
+                .education {
+                    width: 20%;
+                }
+                .education-detail {
+                    width: 50%;
+                }
+            }
             .contact-item {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+                //display: flex;
+                //align-items: center;
+                //justify-content: space-between;
                 p {
                     margin: .3rem 0 !important;
                     padding: 0 !important;
                 }
                 .icon {
-                    display: grid;
-                    grid-template-columns: 40px 1fr;
+                    //display: grid;
+                    //grid-template-columns: 40px 1fr;
                     i {
                         display: flex;
                         align-items: center;
