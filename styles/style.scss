@@ -189,6 +189,12 @@ section {
     }
 }
 
+@media (max-width: 450px) {
+    .lang-controls {
+        top: 1%
+    }
+}
+
 
 //////////////////
 // Header Content
@@ -283,6 +289,12 @@ section {
                 margin: 1rem 0.2rem;
             }
         }
+    }
+}
+
+@media (max-width: 385px) {
+    .header-content {
+        top: 7%;
     }
 }
 
