@@ -1,7 +1,7 @@
 {"en": {
     "name": "Hi, i'm <span>David</span>.",
-    "name_2": "I'm a Web Developer.",
-    "home_desc": "I've always been fascinated by the power of technology. I enjoy the challenge of building innovative web applications, solving complex problems and continuous learning. ",
+    "name_2": "I'm a Web Developer & digital Marketer.",
+    "home_desc": "I've always been fascinated by the power of technology. I enjoy the challenge of building innovative web applications, solving complex problems, analysing data and continuous learning. ",
     "linkedin_btn": "View LinkedIn Profile",
     "page_title1": "About <span>me</span><span class='bg_text'>about me</span></h2>",
     "about_me": "Who am i",
@@ -50,8 +50,8 @@
 },
 "fr": {
     "name": "Bonjour, moi c'est <span>David</span>.",
-    "name_2": "Je suis dévelopeur web.",
-    "home_desc": "J'ai toujours été faciné par la technologie. J'apprécie le défi de créer des applications web innovantes, de résoudre des problèmes complexes et d'apprendre continuellement. ",
+    "name_2": "Je suis dévelopeur web et Digital Marketeur.",
+    "home_desc": "J'ai toujours été faciné par la technologie. J'apprécie le défi de créer des applications web innovantes, de résoudre des problèmes complexes, analyser les données et d'apprendre continuellement. ",
     "linkedin_btn": "Voir le profil LinkedIn ",
     "page_title1": "À propos de <span>moi</span><span class='bg-text'>à propos</span></h2>",
     "about_me": "qui suis-je",
