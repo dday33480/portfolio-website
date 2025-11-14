@@ -152,7 +152,7 @@ function LanguageSelection() {
                 //if(selectedLang === "fr") {
                 name.innerHTML = data[selectedLang].name;
                 name2.textContent = data[selectedLang].name_2;
-                homeDesc.textContent = data[selectedLang].home_desc;
+                homeDesc.innerHTML = data[selectedLang].home_desc;
                 pageTitle1.innerHTML = data[selectedLang].page_title1;
                 aboutMe.textContent = data[selectedLang].about_me;
                 aboutDesc.textContent = data[selectedLang].about_desc;
