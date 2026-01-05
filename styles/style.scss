@@ -407,116 +407,6 @@ section {
     }
 }
 
-.about-stats {
-    padding-bottom: 4rem;
-    .progress-bars {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        .progress-bar {
-            display: flex;
-            flex-direction: column;
-            .progress-title {
-                text-transform: uppercase;
-                font-weight: 500;
-            }
-            .progress-container {
-                display: flex;
-                align-items: center;
-                .progress-text {
-                    color: var(--simple-char-color);
-                }
-                .progress {
-                    width: 100%;
-                    height: .45rem;
-                    background-color: var(--bg-color-2);
-                    margin-left: 1rem;
-                    position: relative;
-                    span {
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        height: 100%;
-                        background-color: var(--main-char-color);
-                        transition: var(--transition);
-                        width: 55%;
-                    }
-                    .html {
-                        width: 75%;
-                    }
-                    .css {
-                        width: 60%;
-                    }
-                    .javascript {
-                        width: 65%;
-                    }
-                    .python {
-                        width: 50%;
-                    }
-                    .java {
-                        width: 40%;
-                    }
-                    .php {
-                        width: 45%;
-                    }
-                    .django {
-                        width: 45%;
-                    }
-                    .kivy {
-                        width: 45%;
-                    }
-                    .react {
-                        width: 45%;
-                    }
-                    .node {
-                        width: 45%;
-                    }
-                    .cypress {
-                        width: 50%;
-                    }
-                    .robotframework {
-                        width: 55%;
-                    }
-                    .analytics {
-                        width: 90%;
-                    }
-                    .tag-manager {
-                        width: 95%;
-                    }
-                    .sql {
-                        width: 65%;
-                    }
-                    .postman {
-                        width: 65%;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1230px) {
-    .about-stats {
-        .progress-bars {
-            gap: 2%;
-            padding-bottom: 5%;
-            margin-bottom: 5%;
-            .progress-bar {
-                .progress-title {
-                    font-size: 80%;
-                }
-                .progress-container {
-                    font-size: 80%;
-                    .progress {
-                        margin-left: 2%;
-                        width: 70%;
-                    }
-                }
-            }
-        }
-    }
-}
-
 .stat-title {
     text-transform: uppercase;
     font-size: 1.4rem;
@@ -532,6 +422,118 @@ section {
         height: 1px;
         background-color: var(--simple-char-color);
         transform: translateX(-50%);
+    }
+}
+
+.about-stats {
+    padding-bottom: 4rem;
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+
+        .skill-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-right: 1rem;
+            margin-bottom: 2rem;
+            align-items: center;
+            border: 1px solid var(--simple-char-color);
+            border-radius: 5px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            transition: var(--transition);
+            box-shadow: 1px 2px 15px var(--bg-color-2);
+            &:hover {
+                cursor: default;
+                transform: translateY(-5px);
+                border: 1px solid var(--main-char-color);
+                box-shadow: 1px 4px 15px var(--other-color-1);
+                font-weight: bold;
+                background-color: var(--bg-color-2);
+                color: var(--simple-char-color);
+            }
+        }
+    
+        .skill-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .skill-container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            position: relative;
+            padding-top: 1rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                width: 40%;
+                height: 1px;
+                background-color: var(--simple-char-color);
+                transform: translateX(-50%);
+                opacity: 0.5;
+            }
+        }
+
+        .skill-list > li {
+            border: 1px solid var(--simple-char-color);
+            background-color: var(--simple-char-color);
+            color: var(--bg-color-2);
+            border-radius: 5px;
+            padding: 0.2rem;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0.5rem;
+            transition: var(--transition);
+            box-shadow: 1px 2px 15px var(--bg-color-2);
+            &:hover {
+                cursor: default;
+                transform: translateY(-5px);
+                border: 1px solid var(--main-char-color);
+                box-shadow: 1px 4px 15px var(--other-color-1);
+                font-weight: bold;
+                background-color: var(--bg-color-2);
+                color: var(--simple-char-color);
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1230px) {
+    .about-stats {
+        .skills {
+            grid-template-columns: 1fr; 
+            padding: 0 5%;
+        }
+
+        .skill-group {
+            margin-right: 0; 
+            margin-bottom: 2rem;
+            width: 100%; 
+            
+            .skill-title {
+                font-size: 1.1rem;
+            }
+
+            .skill-container {
+                width: 100%;
+                justify-content: center;
+            }
+        }
     }
 }
 

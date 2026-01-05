@@ -118,6 +118,10 @@ function LanguageSelection() {
         let xpDesc9 = document.querySelector('.xp-desc-9');
         let xpTitle10 = document.querySelector('.xp-title-10');
         let xpDesc10 = document.querySelector('.xp-desc-10');
+        let xpTitle11 = document.querySelector('.xp-title-11');
+        let xpDesc11 = document.querySelector('.xp-desc-11');
+        let xpTitle12 = document.querySelector('.xp-title-12');
+        let xpDesc12 = document.querySelector('.xp-desc-12');
         let portfolioPage = document.querySelector('.portfolio-page');
         let portfolioText = document.querySelector('.portfolio-text');
         let projectSource = document.querySelectorAll('.project-source');
@@ -183,6 +187,10 @@ function LanguageSelection() {
                 xpDesc9.innerHTML = data[selectedLang].xp_desc_9;
                 xpTitle10.innerHTML = data[selectedLang].xp_title_10;
                 xpDesc10.innerHTML = data[selectedLang].xp_desc_10;
+                xpTitle11.innerHTML = data[selectedLang].xp_title_11;
+                xpDesc11.innerHTML = data[selectedLang].xp_desc_11;
+                xpTitle12.innerHTML = data[selectedLang].xp_title_12;
+                xpDesc12.innerHTML = data[selectedLang].xp_desc_12;
                 portfolioPage.innerHTML = data[selectedLang].portfolio_page;
                 portfolioText.innerHTML = data[selectedLang].portfolio_text;
                 contactPage.innerHTML = data[selectedLang].contact_page;

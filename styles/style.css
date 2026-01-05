@@ -389,111 +389,6 @@ section {
     font-size: 80%;
   }
 }
-.about-stats {
-  padding-bottom: 4rem;
-}
-.about-stats .progress-bars {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-.about-stats .progress-bars .progress-bar {
-  display: flex;
-  flex-direction: column;
-}
-.about-stats .progress-bars .progress-bar .progress-title {
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.about-stats .progress-bars .progress-bar .progress-container {
-  display: flex;
-  align-items: center;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress-text {
-  color: var(--simple-char-color);
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress {
-  width: 100%;
-  height: 0.45rem;
-  background-color: var(--bg-color-2);
-  margin-left: 1rem;
-  position: relative;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress span {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  background-color: var(--main-char-color);
-  transition: var(--transition);
-  width: 55%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .html {
-  width: 75%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .css {
-  width: 60%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .javascript {
-  width: 65%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .python {
-  width: 50%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .java {
-  width: 40%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .php {
-  width: 45%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .django {
-  width: 45%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .kivy {
-  width: 45%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .react {
-  width: 45%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .node {
-  width: 45%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .cypress {
-  width: 50%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .robotframework {
-  width: 55%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .analytics {
-  width: 90%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .tag-manager {
-  width: 95%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .sql {
-  width: 65%;
-}
-.about-stats .progress-bars .progress-bar .progress-container .progress .postman {
-  width: 65%;
-}
-
-@media (max-width: 1230px) {
-  .about-stats .progress-bars {
-    gap: 2%;
-    padding-bottom: 5%;
-    margin-bottom: 5%;
-  }
-  .about-stats .progress-bars .progress-bar .progress-title {
-    font-size: 80%;
-  }
-  .about-stats .progress-bars .progress-bar .progress-container {
-    font-size: 80%;
-  }
-  .about-stats .progress-bars .progress-bar .progress-container .progress {
-    margin-left: 2%;
-    width: 70%;
-  }
-}
 .stat-title {
   text-transform: uppercase;
   font-size: 1.4rem;
@@ -512,6 +407,106 @@ section {
   transform: translateX(-50%);
 }
 
+.about-stats {
+  padding-bottom: 4rem;
+}
+.about-stats .skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
+.about-stats .skills .skill-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  border: 1px solid var(--simple-char-color);
+  border-radius: 5px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: var(--transition);
+  box-shadow: 1px 2px 15px var(--bg-color-2);
+}
+.about-stats .skills .skill-group:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  border: 1px solid var(--main-char-color);
+  box-shadow: 1px 4px 15px var(--other-color-1);
+  font-weight: bold;
+  background-color: var(--bg-color-2);
+  color: var(--simple-char-color);
+}
+.about-stats .skills .skill-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.about-stats .skills .skill-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  padding-top: 1rem;
+}
+.about-stats .skills .skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.about-stats .skills .skill-list::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 40%;
+  height: 1px;
+  background-color: var(--simple-char-color);
+  transform: translateX(-50%);
+  opacity: 0.5;
+}
+.about-stats .skills .skill-list > li {
+  border: 1px solid var(--simple-char-color);
+  background-color: var(--simple-char-color);
+  color: var(--bg-color-2);
+  border-radius: 5px;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.5rem;
+  transition: var(--transition);
+  box-shadow: 1px 2px 15px var(--bg-color-2);
+}
+.about-stats .skills .skill-list > li:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  border: 1px solid var(--main-char-color);
+  box-shadow: 1px 4px 15px var(--other-color-1);
+  font-weight: bold;
+  background-color: var(--bg-color-2);
+  color: var(--simple-char-color);
+}
+
+@media (max-width: 1230px) {
+  .about-stats .skills {
+    grid-template-columns: 1fr;
+    padding: 0 5%;
+  }
+  .about-stats .skill-group {
+    margin-right: 0;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  .about-stats .skill-group .skill-title {
+    font-size: 1.1rem;
+  }
+  .about-stats .skill-group .skill-container {
+    width: 100%;
+    justify-content: center;
+  }
+}
 @media (max-width: 1230px) {
   .stat-title {
     padding: 8% 0%;
