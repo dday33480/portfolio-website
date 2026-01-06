@@ -13,6 +13,39 @@ const subject = document.getElementById("subject");
 const message = document.getElementById("message");
 
 
+// Consent Handling for cookies
+function handleConsent(status) {
+    gtag('consent', 'update', {
+        'ad_storage': status,
+        'analytics_storage': status,
+        'ad_user_data': status,
+        'ad_personalization': status
+    });
+
+    window.dataLayer.push({
+        'event': 'consent_updated',
+        'consent_status': status
+    });
+
+    localStorage.setItem('user_consent_choice', status);
+
+    const banner = document.getElementById('cookie-banner');
+    if (banner) {
+        banner.style.display = 'none';
+    }
+    
+    console.log("Consentement GTM mis à jour : " + status);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const banner = document.getElementById('cookie-banner');
+    const userChoice = localStorage.getItem('user_consent_choice');
+
+    if (banner && !userChoice) {
+        banner.setAttribute('style', 'display: block !important');
+    }
+});
+
 
 // Page navigation
 function PageNavigation() {
