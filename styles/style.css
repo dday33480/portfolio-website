@@ -381,7 +381,7 @@ section {
   text-transform: uppercase;
 }
 
-@media (max-width: 1230px) {
+@media (min-width: 407px) and (max-width: 1230px) {
   .about-container {
     padding-top: 1%;
     padding-bottom: 1%;
@@ -413,10 +413,43 @@ section {
     padding: 0.5rem;
   }
   .about-container .right-about .about-item .about-text .large-text {
-    font-size: 120%;
+    font-size: 100%;
   }
   .about-container .right-about .about-item .about-text .small-text {
     font-size: 80%;
+  }
+}
+@media (max-width: 406px) {
+  .about-container {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .about-container .right-about {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    gap: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+  }
+  .about-container .right-about .about-item {
+    box-shadow: 2px 4px 10px var(--bg-color-2);
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0;
+  }
+  .about-container .right-about .about-item .about-text {
+    padding: 0.2rem;
+  }
+  .about-container .right-about .about-item .about-text .large-text {
+    font-size: 100%;
+  }
+  .about-container .right-about .about-item .about-text .small-text {
+    font-size: 70%;
+    padding-left: 10px;
+    padding-top: 10px;
   }
 }
 .stat-title {
